@@ -4,20 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Aidan Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Space Grotesk', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            background-color: black;
+        }
+        .logo {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            margin-right: 10px;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+        }
+        .instagram-link {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+        .instagram-link:hover {
+            text-decoration: underline;
         }
         a {
             color: #1E90FF;
         }
+        .container {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic static website hosted on GitHub Pages.</p>
-    <a href="story.html">Read my story</a>
+    <div class="header">
+        <div class="title">
+            <div class="logo"></div>
+            <h1>The Aidan Website</h1>
+        </div>
+        <a class="instagram-link" href="https://www.instagram.com/aidancollinsart/" target="_blank">Instagram</a>
+    </div>
+    <div class="container">
+        <p>This is a basic static website hosted on GitHub Pages.</p>
+        <a href="story.html">Read my story</a>
+    </div>
 </body>
 </html>
