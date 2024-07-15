@@ -14,6 +14,8 @@
             padding: 0;
             height: 100vh;
             overflow: hidden; /* Prevent vertical scrolling */
+            display: flex;
+            flex-direction: column;
         }
         .header {
             display: flex;
@@ -71,6 +73,7 @@
             align-items: center;
             margin-right: 30px; /* Space between images */
             flex-shrink: 0; /* Prevent shrinking of individual image containers */
+            width: calc(100vh * 0.7); /* Adjust width based on viewport height */
         }
         .image-container img {
             width: 100%; /* Make images responsive */
@@ -84,22 +87,18 @@
         }
         /* Specific sizes for individual images */
         .image-container.image1 {
-            width: 38%; /* Set custom width as a percentage for the first image */
-            margin-top: 85px;
+            margin-top: calc(100vh * 0.1);
         }
         .image-container.image2 {
-            width: 38%; /* Set custom width as a percentage for the second image */
-            margin-top: 200px; /* Adjust vertical position */
-            margin-left: 75px;
+            margin-top: calc(100vh * 0.25);
+            margin-left: calc(100vh * 0.1);
         }
         .image-container.image3 {
-            width: 40%; /* Set custom width as a percentage for the third image */
-            margin-left: 140px;
+            margin-left: calc(100vh * 0.2);
         }
         .image-container.image4 {
-            width: 45%; /* Set custom width as a percentage for the third image */
-            margin-left: 140px;
-            margin-top: 250px;
+            margin-top: calc(100vh * 0.3);
+            margin-left: calc(100vh * 0.2);
         }
         .image-container.spacer {
             width: 30px; /* Adjust this value to your desired margin */
