@@ -12,6 +12,11 @@
             font-family: 'Space Grotesk', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .header {
             display: flex;
@@ -19,6 +24,12 @@
             justify-content: space-between;
             padding: 10px 30px;
             background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
         }
         .logo {
             width: 30px;
@@ -29,20 +40,37 @@
         .title {
             display: flex;
             align-items: center;
+            flex-grow: 1;
+            margin-right: 10px; /* Space between title and Instagram link */
         }
         .instagram-link {
-            font-size: 16px;
-            color: white;
+            font-size: 18px;
+            color: #1E90FF;
             text-decoration: none;
         }
         .instagram-link:hover {
             text-decoration: underline;
         }
-        a {
-            color: #1E90FF;
+        .image-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            padding-top: 80px; /* Increased padding to ensure the image is below the header */
+            padding-left: 30px;
         }
-        .container {
-            padding: 20px;
+        .image-container img {
+            max-width: 35%; /* Adjust this value to scale the image */
+            height: auto;
+            display: block; /* Ensures no extra space below the image */
+        }
+        .alignment-line {
+            position: absolute;
+            top: 53px; /* Adjust this value to align with the text */
+            left: 0;
+            width: 100%;
+            border-top: 1px dashed red; /* Dashed red line for visibility */
+            z-index: 2; /* Make sure the line is above other elements */
         }
     </style>
 </head>
@@ -54,9 +82,9 @@
         </div>
         <a class="instagram-link" href="https://www.instagram.com/aidancollinsart/" target="_blank">Instagram</a>
     </div>
-    <div class="container">
-        <p>This is a basic static website hosted on GitHub Pages.</p>
-        <a href="story.html">Read my story</a>
+    <div class="alignment-line"></div> <!-- Alignment line -->
+    <div class="image-container">
+        <img src="images/img.png" alt="Your Image Description">
     </div>
 </body>
 </html>
