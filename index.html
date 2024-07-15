@@ -12,11 +12,8 @@
             font-family: 'Space Grotesk', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
             height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow: hidden; /* Prevent vertical scrolling */
         }
         .header {
             display: flex;
@@ -52,22 +49,61 @@
         .instagram-link:hover {
             text-decoration: underline;
         }
-        .image-container {
+        .content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            padding-top: 190px; /* Increased padding to ensure the image is below the header */
+            width: 100%;
+            height: 100%;
+            padding-top: 60px; /* Ensure the content starts below the fixed header */
+            box-sizing: border-box;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+        .images-row {
+            display: flex;
             padding-left: 30px;
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+            white-space: nowrap; /* Prevent line breaks within the flex container */
+            flex-shrink: 0; /* Prevent shrinking of the flex container */
+        }
+        .image-container {
+            display: inline-block; /* Ensures that each image-container takes its own space horizontally */
+            flex-direction: column;
+            align-items: center;
+            margin-right: 30px; /* Space between images */
+            flex-shrink: 0; /* Prevent shrinking of individual image containers */
         }
         .image-container img {
-            max-width: 35%; /* Adjust this value to scale the image */
-            height: auto;
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
             display: block; /* Ensures no extra space below the image */
         }
         .text-below-image {
             text-align: center;
-            margin-top: 20px;
-            width: 35%; /* Match the width of the image */
+            margin-top: 10px;
+            width: 100%; /* Match the width of the image */
+        }
+        /* Specific sizes for individual images */
+        .image-container.image1 {
+            width: 38%; /* Set custom width as a percentage for the first image */
+            margin-top: 85px;
+        }
+        .image-container.image2 {
+            width: 38%; /* Set custom width as a percentage for the second image */
+            margin-top: 200px; /* Adjust vertical position */
+            margin-left: 75px;
+        }
+        .image-container.image3 {
+            width: 40%; /* Set custom width as a percentage for the third image */
+            margin-left: 140px;
+        }
+        .image-container.image4 {
+            width: 45%; /* Set custom width as a percentage for the third image */
+            margin-left: 140px;
+            margin-top: 250px;
+        }
+        .image-container.spacer {
+            width: 30px; /* Adjust this value to your desired margin */
+            flex-shrink: 0; /* Prevent this spacer from shrinking */
         }
     </style>
 </head>
@@ -79,10 +115,34 @@
         </div>
         <a class="instagram-link" href="https://www.instagram.com/aidancollinsart/" target="_blank">Instagram</a>
     </div>
-    <div class="image-container">
-        <img src="images/img.png" alt="Your Image Description">
-        <div class="text-below-image">
-            <p>Aidan Collins<br>Artist & Writer</p>
+    <div class="content">
+        <div class="images-row">
+            <div class="image-container image1">
+                <img src="images/img.png" alt="Image 1 Description">
+                <div class="text-below-image">
+                    <p>Aidan Collins<br>Artist & Writer</p>
+                </div>
+            </div>
+            <div class="image-container image2">
+                <img src="images/tophat.png" alt="Image 2 Description">
+                <div class="text-below-image">
+                    <p>Top Hat</p>
+                </div>
+            </div>
+            <div class="image-container image3">
+                <img src="images/thecross.png" alt="Image 3 Description">
+                <div class="text-below-image">
+                    <p>The Cross</p>
+                </div>
+            </div>
+            <div class="image-container image4">
+                <img src="images/fivetapers.png" alt="Image 4 Description">
+                <div class="text-below-image">
+                    <p>Five Tapers</p>
+                </div>
+            </div>
+            <div class="image-container spacer"></div>
+            <!-- Add more image containers as needed -->
         </div>
     </div>
 </body>
