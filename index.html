@@ -13,8 +13,8 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             height: 100vh;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
@@ -47,16 +47,16 @@
             font-size: 18px;
             color: #1E90FF;
             text-decoration: none;
+            margin-top: 10px;
         }
         .instagram-link:hover {
             text-decoration: underline;
         }
         .image-container {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            padding-top: 80px; /* Increased padding to ensure the image is below the header */
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 190px; /* Increased padding to ensure the image is below the header */
             padding-left: 30px;
         }
         .image-container img {
@@ -64,13 +64,10 @@
             height: auto;
             display: block; /* Ensures no extra space below the image */
         }
-        .alignment-line {
-            position: absolute;
-            top: 53px; /* Adjust this value to align with the text */
-            left: 0;
-            width: 100%;
-            border-top: 1px dashed red; /* Dashed red line for visibility */
-            z-index: 2; /* Make sure the line is above other elements */
+        .text-below-image {
+            text-align: center;
+            margin-top: 20px;
+            width: 35%; /* Match the width of the image */
         }
     </style>
 </head>
@@ -82,9 +79,11 @@
         </div>
         <a class="instagram-link" href="https://www.instagram.com/aidancollinsart/" target="_blank">Instagram</a>
     </div>
-    <div class="alignment-line"></div> <!-- Alignment line -->
     <div class="image-container">
         <img src="images/img.png" alt="Your Image Description">
+        <div class="text-below-image">
+            <p>Aidan Collins<br>Artist & Writer</p>
+        </div>
     </div>
 </body>
 </html>
