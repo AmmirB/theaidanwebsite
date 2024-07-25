@@ -13,7 +13,6 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            overflow: hidden; /* Prevent vertical scrolling */
             display: flex;
             flex-direction: column;
         }
@@ -85,6 +84,25 @@
             margin-top: 10px;
             width: 100%; /* Match the width of the image */
         }
+        .read-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            flex-shrink: 0; /* Prevent shrinking of the link container */
+            color: #1E90FF;
+            text-align: center;
+            font-size: 24px; /* Make the text bigger */
+        }
+        .read-links a {
+            color: #1E90FF;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .read-links a:hover {
+            text-decoration: underline;
+        }
         /* Specific sizes for individual images */
         .image-container.image1 {
             margin-top: calc(100vh * 0.1);
@@ -121,6 +139,11 @@
                 <div class="text-below-image">
                     <p>Aidan Collins<br>Artist & Writer</p>
                 </div>
+            </div>
+            <div class="read-links">
+                <p>READ:</p>
+                <a href="gifthorse/index.html" target="_blank">The Gift Horse</a>
+                <a href="clownsclemency/index.html" target="_blank">Clowns Clemency 1-10</a>
             </div>
             <div class="image-container image2">
                 <img src="images/tophat.png" alt="Image 2 Description">
